@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-epilogue: "Epilogue", sans-serif;
+  --font-nunito: "Nunito Sans", sans-serif;
+
+  --color-surface: #04122e;
+  --color-surface-dim: #04122e;
+  --color-surface-bright: #2c3956;
+  --color-surface-container-lowest: #010d29;
+  --color-surface-container-low: #0d1b36;
+  --color-surface-container: #121f3b;
+  --color-surface-container-high: #1d2946;
+  --color-surface-container-highest: #283451;
+  --color-on-surface: #d9e2ff;
+  --color-on-surface-variant: #e5bdba;
+  --color-inverse-surface: #d9e2ff;
+  --color-inverse-on-surface: #23304d;
+
+  --color-primary: #ffb3af;
+  --color-on-primary: #68000d;
+  --color-primary-container: #ff5355;
+  --color-on-primary-container: #5c000a;
+  --color-primary-fixed: #ffdad7;
+  --color-primary-fixed-dim: #ffb3af;
+
+  --color-secondary: #ffce4e;
+  --color-on-secondary: #3e2e00;
+  --color-secondary-container: #e5b100;
+  --color-on-secondary-container: #5d4600;
+  --color-secondary-fixed: #ffdf97;
+  --color-secondary-fixed-dim: #f5bf1b;
+
+  --color-tertiary: #b4c5ff;
+  --color-on-tertiary: #002979;
+  --color-tertiary-container: #638aff;
+  --color-on-tertiary-container: #00236b;
+  --color-tertiary-fixed: #dbe1ff;
+  --color-tertiary-fixed-dim: #b4c5ff;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #04122e;
+    color: #d9e2ff;
+    font-family: var(--font-nunito), -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .pl-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  .pr-safe {
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* Material Symbols support */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Chunky 3D arcade tactile bevel classes */
+.btn-arcade-red {
+  background-color: #ff5355;
+  box-shadow: 0 7px 0 #5c000a;
+}
+.btn-arcade-red:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5c000a;
+}
+
+.btn-arcade-yellow {
+  background-color: #ffce4e;
+  box-shadow: 0 5px 0 #5a4400;
+}
+.btn-arcade-yellow:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #5a4400;
+}
+
+.btn-arcade-blue {
+  background-color: #638aff;
+  box-shadow: 0 5px 0 #00236b;
+}
+.btn-arcade-blue:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #00236b;
+}
+
+.btn-arcade-green {
+  background-color: #10b981;
+  box-shadow: 0 5px 0 #065f46;
+}
+.btn-arcade-green:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #065f46;
+}
+
+.btn-arcade-pod {
+  background-color: #1d2946;
+  box-shadow: 0 6px 0 #010d29;
+}
+.btn-arcade-pod:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #010d29;
+}
